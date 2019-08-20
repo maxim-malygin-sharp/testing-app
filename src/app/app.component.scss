@@ -1,0 +1,118 @@
+.container {
+  padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+	max-width: 1036px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.header {
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
+
+.testing-app-table {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-top: 85px;
+  }
+}
+
+.table-full-width {
+  width: 100%;
+}
+
+.mat-header-cell {
+  font-size: 16px;
+}
+
+.element-symbol {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6em;
+  height: 2.2em;
+  border: 2px solid #0F75BC;
+  border-radius: .25em;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__label {
+  }
+
+  &__input {
+    padding: 16px 0 0;
+    font-size: 14px;
+    margin-left: auto;
+
+    @media (max-width: 767px) {
+      position: absolute;
+      top: -70px;
+      left: 0;
+      padding-top: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__clear-filter {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    background-color: #ededed;
+    transform-origin: center bottom;
+    transform: perspective(200px) rotateX(90deg);
+    opacity: 0;
+    transition: transform .15s ease-in-out, opacity .15s ease-in-out;
+
+    &_shown {
+      transform: perspective(200px) rotateX(0);
+      opacity: 1;
+    }
+  }
+
+  &__search-activator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 4px;
+    border-radius: 4px;
+    color: #ccc;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+    .mat-icon {
+      font-size: 20px;
+      width: 16px;
+      height: 16px;
+    }
+
+    &_active {
+      color: #fff;
+      background-color: #cccccc;
+      pointer-events: none;
+    }
+  }
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.footer {
+  margin-top: 20px;
+  min-height: 120px;
+  background-color: #343d46;
+  color: #eff1f5;
+}
